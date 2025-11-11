@@ -4,21 +4,22 @@ public class ProductDTO {
     private int id;
     private String name;
     private double price;
-    private int id_cat;
+    private int quantity; // Changed from id_cat
 
-    public ProductDTO() {}
-
-    public ProductDTO(int id, String name, double price, int id_cat) {
-        this.id = id; this.name = name; this.price = price; this.id_cat = id_cat;
+    public ProductDTO() {
     }
 
-    public ProductDTO(String name, double price, int id_cat) {
-        this.name = name; this.price = price; this.id_cat = id_cat;
+    public ProductDTO(int id, String name, double price, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -26,6 +27,7 @@ public class ProductDTO {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -33,14 +35,16 @@ public class ProductDTO {
     public double getPrice() {
         return price;
     }
+
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public int getId_cat() {
-        return id_cat;
+    public int getQuantity() {
+        return quantity;
     }
-    public void setId_cat(int id_cat) {
-        this.id_cat = id_cat;
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
